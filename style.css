@@ -225,7 +225,7 @@ header .navbar {
   100% { transform: translateY(0); }
 }
 
-.hero-image, .about-image,.service-image, .gallery-image, .partner-image {
+.hero-image, .about-image,.service-image, .gallery-image, .partner-image, .country-card{
   animation: float 3s ease-in-out infinite;
 }
 
@@ -540,12 +540,15 @@ header .navbar {
         gap: 20px;
         align-items: center;
         color: var(--white-color);
-
+}
+.footer-section .copyright-text {
+        padding-top: 10px;
 }
 .footer-section .social-link-list .social-link {
         color: var(--primary-color);
         transition: all 0.3s ease;
         font-size: var(--font-size-md);
+        padding-top: 10px;
      
      }
 .footer-section .social-link-list .social-link:hover {
