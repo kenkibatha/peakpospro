@@ -329,12 +329,15 @@
                     </li>
                 </ul>
 
-                <form action="#" class="contact-form" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-                    <input type="text" placeholder="Your Name" class="form-input"
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+
+                    <input type="hidden" name="access_key" value="9508e5f2-f5e4-4146-8d8c-09ee185bb6e2">
+
+                    <input type="text" name="name" placeholder="Your Name" class="form-input"
                      required>
-                    <input type="email" placeholder="Your Email" class="form-input" 
+                    <input type="email" name="email" placeholder="Your Email" class="form-input" 
                     required>
-                    <textarea placeholder="Your Message" class="form-input"
+                    <textarea name="message" placeholder="Your Message" class="form-input"
                     required></textarea>
                     <button class="submit-button">Submit</button> 
                 </form>
