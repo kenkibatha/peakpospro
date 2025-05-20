@@ -133,8 +133,8 @@ header .navbar {
 }
 
 .navbar .nav-menu .nav-link:hover{
-    color: var(--secondary-color);
-    background-color: var(--link-hover-color);
+    color: var(--link-hover-color);
+    background-color: none;
 }
  
 .navbar :where(#menu-close-button, #menu-open-button) {
