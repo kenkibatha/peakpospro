@@ -225,7 +225,7 @@ header .navbar {
   100% { transform: translateY(0); }
 }
 
-.hero-image, .about-image,.service-image, .gallery-image, .partner-image, .country-card{
+.hero-image, .about-image,.service-image, .gallery-image, .partner-image, .country-card, .feature-icon {
   animation: float 3s ease-in-out infinite;
 }
 
@@ -355,6 +355,99 @@ header .navbar {
 .learn-more:hover {
   color: var(--link-hover-color);
   transform: translateX(5px);
+}
+ /* Defining styles for the software section */
+/* ensure relative positioning for overlay */
+.software-section {
+  position: relative;
+  padding: 4rem 1rem;
+  color: #fff;
+  overflow: hidden;
+}
+
+.software-section .overlay {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+strong {
+  font-weight: bold;
+color: var(--link-hover-color);
+}
+
+.software-section .container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.section-title {
+  font-size: 2.75rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-top: 100px;
+}
+
+.lead {
+  font-size: 1.25rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+}
+
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.software-feature {
+  background: rgba(255,255,255,0.1);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.feature-icon {
+        max-width: 100%;
+        aspect-ratio: 1;
+        margin-bottom: 15px;
+        object-fit: contain;
+}
+
+.software-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.software-cta p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover {
+  background: var(--link-hover-color);
+  transform: translateY(-2px);
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .section-title { font-size: 2rem; }
+  .lead { font-size: 1rem; }
 }
 
 
