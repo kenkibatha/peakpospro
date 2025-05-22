@@ -35,8 +35,16 @@
                 <li class="nav-items">
                     <a href="index.html#about" class="nav-link">About</a>
                 </li>
-                <li class="nav-items">
-                    <a href="index.html#services" class="nav-link">Services</a>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="toggle-dropdown">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="software-solutions.html#software-details">Software Solutions</a></li>
+                        <li><a href="hardware-solutions.html#hardware-details">Hardware Solutions</a></li>
+                        <li><a href="repair-lab.html#repair-details">Repair Lab </a></li>
+                        <li><a href="consulting-services.html#consulting-details">Consulting Services</a></li>
+                        <li><a href="customer-support.html#support-details">Customer Support</a></li>
+                        <li><a href="training-and-education.html#training-details">Training and Education</a></li>
+                    </ul>
                 </li>
                 <li class="nav-items">
                     <a href="index.html#partners" class="nav-link">Partners</a>
@@ -343,6 +351,7 @@
 <!--disable image rotation on touch-->
 <script>
   document.querySelectorAll('.hardware-feature').forEach(feature => {
+
     feature.addEventListener('touchstart', () => {
       feature.querySelectorAll('.rotating-image').forEach(img => {
         img.style.animationPlayState = 'paused';
@@ -356,6 +365,7 @@
     });
   });
 </script>
+
 
 
 </body>

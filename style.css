@@ -124,7 +124,7 @@ header .navbar {
 
 
 
-.navbar .nav-menu .nav-link {
+.navbar .nav-menu .nav-link, .toggle-dropdown {
     color: var(--primary-color);
     font-size: var(--font-size-md);
     border-radius: var(--border-radius-m);
@@ -139,6 +139,52 @@ header .navbar {
  
 .navbar :where(#menu-close-button, #menu-open-button) {
         display: none;
+}
+
+/* Hide dropdown by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color:var(--secondary-color);
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: var(--border-radius-sm);
+}
+
+/* Show dropdown on hover */
+.dropdown-menu li  {
+  padding: 10px;
+  white-space: nowrap;
+}
+.dropdown-menu li a {
+  color: var(--dark-color);
+}
+.dropdown-menu li a:hover {
+  color: var(--link-hover-color);
+transition: o.3s ease;
+}
+
+
+.dropdown:hover .dropdown-menu {
+
+  display: block;
+}
+
+/* Optional: align menu below link */
+.dropdown {
+  position: relative;
+}
+
+/* For mobile menu dropdowns */
+.mobile-dropdown .dropdown-menu {
+  position: static;
+  background-color: #f9f9f9;
+  box-shadow: none;
+}
+
+.mobile-dropdown.open .dropdown-menu {
+  display: block;
 }
 
 /*hero section styles*/
@@ -870,7 +916,7 @@ body.show-mobile-menu .navbar .nav-menu {
         left: 0;
 }
     
-.navbar .nav-menu .nav-link {
+.navbar .nav-menu .nav-link, .toggle-dropdown {
         color: var(--white-color);
         display: block;
         margin-top: 17px;
