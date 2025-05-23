@@ -62,10 +62,132 @@
 
     <main>
 
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>Repair Lab</h1>
-                <p>Our Repair Lab is a state-of-the-art facility designed to provide high-quality repair services for a wide range of products. Our team of skilled technicians use the latest tools and equipment to diagnose and repair any issue that may arise with your product.</p>
+        <section 
+        class="section-content repair-section"
+        id="repair-details"
+        style="background: url('images/bg-software4.png') no-repeat center/cover;"
+        >
+    <div class="overlay"></div>
+    <div class="hero-content animate__animated animate__fadeInDown">
+      <h1
+      class="section-title" 
+        data-aos="fade-down" 
+        data-aos-duration="800">
+        Repair Lab
+    </h1>
+
+      <p
+      class="lead" 
+        data-aos="fade-down" 
+        data-aos-duration="800" 
+        data-aos-delay="200">
+        Our Repair Lab is a state-of-the-art facility designed to provide high-quality repair services for a wide range of products. 
+        Our team of skilled technicians use the latest tools and equipment to diagnose and repair 
+        any issue that may arise with your product.</p>
+    </div>
+  
+
+                                    <section class="core-devices section-content1" data-aos="fade-up">
+                                        <h2>Core Devices We Repair</h2>
+                                        <ul class="device-list">
+                                        <li class="hover-animate" data-modal="modal-pos">Point of Sale (POS) Terminals</li>
+                                        <li class="hover-animate" data-modal="modal-card">Card Printers</li>
+                                        <li class="hover-animate" data-modal="modal-atm">ATMs</li>
+                                        <li class="hover-animate" data-modal="modal-bio">Biometric Registration Tablets</li>
+                                        </ul>
+                                    </section>
+
+  <section class="peripherals section-content1" data-aos="fade-up">
+    <h2>Other Peripherals</h2>
+    <ul class="device-list">
+      <li class="hover-animate">Smartphones</li>
+      <li class="hover-animate">Laptops & Computers</li>
+      <li class="hover-animate">CCTV Systems</li>
+      <li class="hover-animate">Consumer Electronics</li>
+    </ul>
+  </section>
+
+  <section class="repair-process section-content1" data-aos="fade-up">
+    <h2>Repair Process</h2>
+    <div class="repair-flowchart animate__animated animate__fadeIn">
+      <button class="accordion">Level 1: Diagnosis, software installation, and configuration</button>
+      <div class="panel">
+        <p>Initial analysis involves indepth diagnostics. Software reloads and configuration are done
+             to resolve simple functional issues. 
+            Where applicable, we prepare for the next level of repair.</p>
+      </div>
+      <button class="accordion">Level 2: Component replacement</button>
+      <div class="panel">
+        <p>In this service category, we replace hardware components such as worn out keypads, screens, 
+            sim boards, antennas, printers, and other swappable parts.</p>
+      </div>
+      <button class="accordion">Level 3: Motherboard-level repairs</button>
+      <div class="panel">
+        <p>At this stage we perform advanced repairs. It entails replacement of complex components such as;
+             Intergrated Circuits (ICs), diodes, USB ports, CMOS batteries,card readers and more.</p>
+      </div>
+      <button class="accordion">Final QA</button>
+      <div class="panel">
+        <p>Rigorous and meticulous Quality Assurance is finally done before customer delivery as 
+            per our defined (Service Level Agreement) SLA.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lab-info section-content1" data-aos="fade-up">
+    <h2>Why Choose Our Repair Lab?</h2>
+    <ul class="lab-benefits">
+      <li class="hover-animate">Fully equipped repair and diagnostics facility</li>
+      <li class="hover-animate">Highly trained and certified engineers</li>
+      <li class="hover-animate">Fast turnaround time with strict adherence to SLAs</li>
+      <li class="hover-animate">Comprehensive quality checks at all stages</li>
+    </ul>
+  </section>
+
+  <!-- Modals for core devices -->
+  <div id="modal-pos" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>POS Terminals</h3>
+      <p>Comprehensive repair solutions for all major POS terminal models at all levels of repair: Level 1, Level 2, and Level 3.  </p>
+    </div>
+  </div>
+  <div id="modal-card" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Card Printers</h3>
+      <p>We offer expert repair services for all types of card printer issues. This includes overhaul cleaning, part replacement, and firmware updates etc.</p>
+    </div>
+  </div>
+  <div id="modal-atm" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>ATMs</h3>
+      <p>Receive expert diagnostics and firmware updates for all ATMs. Quarterly maintenance, replacement of cash dispensers, 
+        card readers, power systems etc.</p>
+    </div>
+  </div>
+  <div id="modal-bio" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Biometric Tablets</h3>
+      <p>Professional repair of biometric devices including fingerprint scanners, cameras, display units etc.</p>
+    </div>
+  </div>
+
+  <div 
+        class="software-cta" 
+        data-aos="zoom-in" 
+        data-aos-duration="1000" 
+        data-aos-delay="700"
+      >
+        <h2>Ready for Quality Repair?</h2>
+        <p>Let us connect you with our expert engineers</p>
+        <a href="index.html#contact" class="btn">Get in Touch</a>
+      </div>
+
+    </div>
+  </section>
 </main>
 
 
@@ -139,8 +261,15 @@
     <!--linking aos JS-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init(
+    {
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    }
+  );
 </script>
+
 <!--mobile dropdown-->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -153,6 +282,39 @@
     });
   });
   </script>
+<!-- Modal script -->
+ <script>
+  // Accordion logic
+  document.querySelectorAll(".accordion").forEach(btn => {
+    btn.addEventListener("click", function() {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+  });
+
+  // Modal logic
+  document.querySelectorAll('.hover-animate[data-modal]').forEach(item => {
+    item.addEventListener('click', function () {
+      const modalId = this.getAttribute('data-modal');
+      document.getElementById(modalId).style.display = 'block';
+    });
+  });
+
+  document.querySelectorAll('.modal .close').forEach(btn => {
+    btn.addEventListener('click', function () {
+      this.closest('.modal').style.display = 'none';
+    });
+  });
+
+  window.addEventListener('click', function(event) {
+    document.querySelectorAll('.modal').forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+</script>
 
 </body>
 </html> 
