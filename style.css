@@ -653,6 +653,16 @@ color: var(--link-hover-color);
 .repair-flowchart .panel p{
         color: var(--primary-color);
 }
+.accordion .icon {
+    float: right;
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+  }
+  
+  .accordion.active span.icon {
+  transform: rotate(90deg);
+}
+
 
   .modal  {
     display: none;

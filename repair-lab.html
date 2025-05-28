@@ -107,29 +107,24 @@
     </ul>
   </section>
 
-  <section class="repair-process section-content1" data-aos="fade-up">
+  <section class="repair-process section-content" data-aos="fade-up">
     <h2>Repair Process</h2>
     <div class="repair-flowchart animate__animated animate__fadeIn">
-      <button class="accordion">Level 1: Diagnosis, software installation, and configuration</button>
+      <button class="accordion">Level 1: Diagnosis, software installation, and configuration <span class="icon">&#9656;</span></button>
       <div class="panel">
-        <p>Initial analysis involves indepth diagnostics. Software reloads and configuration are done
-             to resolve simple functional issues. 
-            Where applicable, we prepare for the next level of repair.</p>
+        <p>Initial analysis involves in-depth diagnostics. Software reloads and configuration are done to resolve simple functional issues. Where applicable, we prepare for the next level of repair.</p>
       </div>
-      <button class="accordion">Level 2: Component replacement</button>
+      <button class="accordion">Level 2: Component replacement <span class="icon">&#9656;</span></button>
       <div class="panel">
-        <p>In this service category, we replace hardware components such as worn out keypads, screens, 
-            sim boards, antennas, printers, and other swappable parts.</p>
+        <p>We replace hardware components such as worn out keypads, screens, sim boards, antennas, printers, and other swappable parts.</p>
       </div>
-      <button class="accordion">Level 3: Motherboard-level repairs</button>
+      <button class="accordion">Level 3: Motherboard-level repairs <span class="icon">&#9656;</span></button>
       <div class="panel">
-        <p>At this stage we perform advanced repairs. It entails replacement of complex components such as;
-             Intergrated Circuits (ICs), diodes, USB ports, CMOS batteries,card readers and more.</p>
+        <p>This involves advanced repairs including replacement of complex components like Integrated Circuits (ICs), diodes, USB ports, CMOS batteries, and card readers.</p>
       </div>
-      <button class="accordion">Final QA</button>
+      <button class="accordion">Final QA <span class="icon">&#9656;</span></button>
       <div class="panel">
-        <p>Rigorous and meticulous Quality Assurance is finally done before customer delivery as 
-            per our defined (Service Level Agreement) SLA.</p>
+        <p>Rigorous and meticulous Quality Assurance is conducted before customer delivery per the defined Service Level Agreement (SLA).</p>
       </div>
     </div>
   </section>
@@ -182,7 +177,7 @@
         data-aos-delay="700"
       >
         <h2>Ready for Quality Repair?</h2>
-        <p>Let us connect you with our expert engineers</p>
+        <p>Let us connect you with our expert engineers.</p>
         <a href="index.html#contact" class="btn">Get in Touch</a>
       </div>
 
@@ -260,6 +255,7 @@
     <script src="script.js"></script>
     <!--linking aos JS-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script>
   AOS.init(
     {
@@ -282,7 +278,8 @@
     });
   });
   </script>
-<!-- Modal script -->
+
+
  <script>
   // Accordion logic
   document.querySelectorAll(".accordion").forEach(btn => {
@@ -316,5 +313,41 @@
   });
 </script>
 
+<!-- Interactivity script -->
+<script>
+  document.querySelectorAll('.hover-animate').forEach(item => {
+    item.addEventListener('click', () => {
+      //alert('You clicked on: ' + item.textContent.trim());
+    });
+  });
+
+  <script>
+  //document.querySelectorAll('.accordion').forEach(button => {
+    button.addEventListener('click', () => {
+      const isActive = button.classList.contains('active');
+      
+
+      // Remove active from all accordions and icons
+      document.querySelectorAll('.accordion').forEach(btn => {
+        btn.classList.remove('active');
+        btn.querySelector('.icon').style.transform = "rotate(0deg)";
+      });
+      document.querySelectorAll('.panel').forEach(panel => {
+        panel.style.maxHeight = null;
+      });
+
+      if (!isActive) {
+        button.classList.add('active');
+        button.querySelector('.icon').style.transform = "rotate(90deg)";
+        const panel = button.nextElementSibling;
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  });
+  
+</script>
+
+
 </body>
 </html> 
+
