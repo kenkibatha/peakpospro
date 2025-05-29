@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEAKPOSPRO</title>
+    <link rel="icon" href="images/icon-quantum-computer.png" type="image/x-icon">
      <!-- link to font awesome icons try 6.6.0-->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
      <!--linking swiper CSS-->
@@ -18,7 +19,7 @@
 
 </head> 
 <body>
-    <header> <!-- Your site’s header here --> </header><header>
+    <header>
         <nav class="navbar section-content"> <!--section content-->
 
             <a href="index.html" class="nav.logo">
@@ -40,7 +41,7 @@
                         <li><a href="software-solutions.html#software-details">Software Solutions</a></li>
                         <li><a href="hardware-solutions.html#hardware-details">Hardware Solutions</a></li>
                         <li><a href="repair-lab.html#repair-details">Repair Lab </a></li>
-                        <li><a href="consulting-services.html#consulting-details">Consulting Services</a></li>
+                        <li><a href="installation-services.html#installation-details">CCTV Installation</a></li>
                         <li><a href="customer-support.html#support-details">Customer Support</a></li>
                         <li><a href="training-and-education.html#training-details">Training and Education</a></li>
                     </ul>
@@ -61,7 +62,92 @@
     </header>
 
     <main>
-        
+
+        <section 
+        class="section-content install-section"
+        id="installation-details"
+        style="background: url('images/bg-software4.png') no-repeat center/cover;"
+        >
+    <div class="overlay"></div>
+    <div class="hero-content animate__animated animate__fadeInDown">
+      <h1
+      class="section-title" 
+        data-aos="fade-down" 
+        data-aos-duration="800">
+        CCTV Installation 
+    </h1>
+
+      <p
+      class="lead" 
+        data-aos="fade-down" 
+        data-aos-duration="800" 
+        data-aos-delay="200">
+        We specialize in seamless and secure <strong>CCTV installations</strong> tailored to your environment. 
+        Our team ensures <strong>optimal placement</strong> of cameras, cabling, and <strong>system configuration</strong> to provide comprehensive surveillance 
+        and monitoring coverage.</p>
+    </div>
+
+    <section class="installation-benefits section-content" data-aos="fade-up">
+    <h2>Why Choose Our CCTV Installation?</h2>
+    <ul class="benefits-list">
+      <li class="hover-animate">
+        <i class="fas fa-map-marked-alt benefit-icon"></i>
+        <span class="benefit-text">Professional Site Survey and Consultation</span>
+      </li>
+      <li class="hover-animate">
+        <i class="fas fa-project-diagram benefit-icon"></i>
+        <span class="benefit-text">Customized System Design</span>
+      </li>
+      <li class="hover-animate">
+        <i class="fas fa-tools benefit-icon"></i>
+        <span class="benefit-text">High-Quality Equipment and Cabling</span>
+      </li>
+      <li class="hover-animate">
+        <i class="fas fa-cogs benefit-icon"></i>
+        <span class="benefit-text">Expert Installation and Configuration</span>
+      </li>
+      <li class="hover-animate">
+        <i class="fas fa-headset benefit-icon"></i>
+        <span class="benefit-text">Post-Installation Support and Training</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="installation-process section-content1" data-aos="fade-up">
+    <h2>Installation Process</h2>
+    <div class="process-flow animate__animated animate__fadeIn">
+      <button class="accordion">Step 1: Consultation & Site Survey <span class="icon">&#9656;</span></button>
+      <div class="panel">
+        <p>We assess your property and requirements to design an optimal CCTV layout that ensures full coverage.</p>
+      </div>
+      <button class="accordion">Step 2: Equipment Selection <span class="icon">&#9656;</span></button>
+      <div class="panel">
+        <p>Based on the survey, we recommend the best cameras, recorders, and networking gear suited for your needs and budget.</p>
+      </div>
+      <button class="accordion">Step 3: Installation & Configuration <span class="icon">&#9656;</span></button>
+      <div class="panel">
+        <p>Our technicians install cameras, run cabling discreetly, configure the system, and integrate with your network.</p>
+      </div>
+      <button class="accordion">Step 4: Testing & Handover <span class="icon">&#9656;</span></button>
+      <div class="panel">
+        <p>We conduct final tests, provide usage training, and deliver system documentation.</p>
+      </div>
+    </div>
+  </section>
+
+  <div 
+        class="software-cta" 
+        data-aos="zoom-in" 
+        data-aos-duration="1000" 
+        data-aos-delay="700"
+      >
+        <h2>Ready to Secure Your Property?</h2>
+        <p>Contact us today for a free consultation and site survey.</p>
+        <a href="index.html#contact" class="btn">Get in Touch</a>
+      </div>
+
+
+        </section>       
 </main>
 
 
@@ -135,8 +221,13 @@
     <!--linking aos JS-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init({
+    duration: 1000, // Animation duration in milliseconds
+    once: true, // Whether animation should happen only once
+    easing: 'ease-in-out', // Easing function for the animations
+  });
 </script>
+
 <!--mobile dropdown-->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -149,6 +240,42 @@
     });
   });
   </script>
+
+<!--accordion function-->
+<script>
+  document.querySelectorAll(".accordion").forEach(btn => {
+    btn.addEventListener("click", function() {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+  });
+
+  document.querySelectorAll('.hover-animate').forEach(item => {
+    item.addEventListener('click', () => {
+     // alert('You clicked on: ' + item.textContent.trim());
+    });
+  });
+
+  document.querySelectorAll('.accordion').forEach(button => {
+    button.addEventListener('click', () => {
+      const isActive = button.classList.contains('active');
+
+      document.querySelectorAll('.accordion').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelectorAll('.panel').forEach(panel => panel.style.maxHeight = null);
+
+      if (!isActive) {
+        button.classList.add('active');
+        const panel = button.nextElementSibling;
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+
+
 
 </body>
 </html> 

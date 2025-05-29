@@ -405,14 +405,15 @@ transition: o.3s ease;
  /* Defining styles for the software and hardware section */
 /* ensure relative positioning for overlay */
 .software-section,
-.hardware-section, .repair-section {
+.hardware-section, .repair-section, .install-section {
   position: relative;
   padding: 4rem 1rem;
   color: #fff;
   overflow: hidden;
 }
 
-.software-section .overlay, .hardware-section .overlay, .repair-section .overlay {
+.software-section .overlay, .hardware-section .overlay, 
+.repair-section .overlay, .install-section .overlay{
   content: '';
   position: absolute;
   inset: 0;
@@ -477,14 +478,15 @@ color: var(--link-hover-color);
         padding-top: 18px;
 }
 
-.software-cta h2,
-.hardware-cta h2 {
+.software-cta h2
+ {
   font-size: 2rem;
   margin-bottom: 0.75rem;
+  align-content: center;
 }
 
-.software-cta p,
-.hardware-cta p {
+.software-cta p
+{
   font-size: 1.125rem;
   margin-bottom: 1.5rem;
 }
@@ -626,7 +628,7 @@ color: var(--link-hover-color);
   }
   
 
-  .repair-flowchart button.accordion {
+  .repair-flowchart button.accordion, .process-flow button.accordion {
     background-color: #eee;
     color: #444;
     cursor: pointer;
@@ -639,24 +641,26 @@ color: var(--link-hover-color);
     transition: 0.4s;
   }
 
-  .repair-flowchart .active, .repair-flowchart button.accordion:hover {
+  .repair-flowchart .active, .repair-flowchart button.accordion:hover, 
+  .process-flow .active, .process-flow button.accordion:hover {
     background-color: #ccc;
     
   }
 
-  .repair-flowchart .panel {
+  .repair-flowchart .panel, .process-flow .panel {
     padding: 0 18px;
     background-color: #eee;
     display: none;
     overflow: hidden;
   }
-.repair-flowchart .panel p{
+.repair-flowchart .panel p, .process-flow .panel p {
         color: var(--primary-color);
 }
 .accordion .icon {
     float: right;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     transition: transform 0.3s;
+    color: var(--link-hover-color);
   }
   
   .accordion.active span.icon {
@@ -739,6 +743,78 @@ color: var(--link-hover-color);
       padding: 8px 0;
     }
   }
+
+/* Defining styles for the installation-services.html page */
+.section-content1 {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .benefits-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .benefits-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #e0e0e0;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+  }
+
+  .benefit-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+
+   .accordion .icon {
+    float: right;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .accordion.active span.icon {
+    transform: rotate(90deg);
+  }
+
+  .accordion.active,
+  .accordion:hover {
+    background-color: #d0e6f7;
+  }
+
+  
+  @media (max-width: 768px) {
+   
+    .benefits-list li {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    
+
+    .benefits-list li {
+      font-size: 0.95rem;
+      padding: 8px 0;
+    }
+
+    .accordion {
+      font-size: 1rem;
+      padding: 12px 16px;
+    }
+
+    .panel {
+      font-size: 0.95rem;
+    }
+  }
+
+
 
 
 /*Partners section styles*/
