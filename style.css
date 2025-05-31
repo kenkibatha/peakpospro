@@ -814,6 +814,26 @@ color: var(--link-hover-color);
     }
   }
 
+  .benefit-modal {
+  display: none;
+  margin-top: 10px;
+ 
+}
+
+.benefit-modal img {
+  max-width: 80%;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.modal-trigger {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+
+
 
 
 
@@ -906,7 +926,11 @@ color: var(--link-hover-color);
   background-repeat: no-repeat;
 
 }
-
+.form-title {
+        text-align: center;
+        font-size: var(--font-size-md);
+        margin-bottom: 10px;
+}
 
 /*contact section styles*/
 .contact-section {

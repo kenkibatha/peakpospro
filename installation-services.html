@@ -93,22 +93,32 @@
       <li class="hover-animate">
         <i class="fas fa-map-marked-alt benefit-icon"></i>
         <span class="benefit-text">Professional Site Survey and Consultation</span>
+        <button class="modal-trigger">🔍</button>
+        <div class="benefit-modal"><img src="images/site-survey.jpg" alt="Site Survey"></div>
       </li>
       <li class="hover-animate">
         <i class="fas fa-project-diagram benefit-icon"></i>
         <span class="benefit-text">Customized System Design</span>
+        <button class="modal-trigger">🔍</button>
+        <div class="benefit-modal"><img src="images/system-design.jpg" alt="System Design"></div>
       </li>
       <li class="hover-animate">
         <i class="fas fa-tools benefit-icon"></i>
         <span class="benefit-text">High-Quality Equipment and Cabling</span>
+        <button class="modal-trigger">🔍</button>
+        <div class="benefit-modal"><img src="images/equipment-cabling.jpg" alt="Equipment and Cabling"></div>
       </li>
       <li class="hover-animate">
         <i class="fas fa-cogs benefit-icon"></i>
         <span class="benefit-text">Expert Installation and Configuration</span>
+        <button class="modal-trigger">🔍</button>
+        <div class="benefit-modal"><img src="images/cctv-installation.webp" alt="Installation"></div>
       </li>
       <li class="hover-animate">
         <i class="fas fa-headset benefit-icon"></i>
         <span class="benefit-text">Post-Installation Support and Training</span>
+        <button class="modal-trigger">🔍</button>
+        <div class="benefit-modal"><img src="images/support-training.jpg" alt="Support and Training"></div>
       </li>
     </ul>
   </section>
@@ -273,6 +283,18 @@
       }
     });
   });
+
+  // Modal functionality
+   document.querySelectorAll('.modal-trigger').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const modal = btn.nextElementSibling;
+      const isVisible = modal.style.display === 'block';
+      document.querySelectorAll('.benefit-modal').forEach(m => m.style.display = 'none');
+      if (!isVisible) modal.style.display = 'block';
+    });
+  });
+
 </script>
 
 
