@@ -35,14 +35,14 @@
                     <a href="index.html#about" class="nav-link">About</a>
                 </li>
                 <li class="dropdown">
-                    <a href="javascript:void(0);" class="toggle-dropdown">Services</a>
+                    <a href="javascript:void(0);" class="toggle-dropdown"></span>Services <span class="icon">&#8595;</a>
                     <ul class="dropdown-menu">
-                        <li><a href="software-solutions.html#software-details">Software Solutions</a></li>
-                        <li><a href="hardware-solutions.html#hardware-details">Hardware Solutions</a></li>
-                        <li><a href="repair-lab.html#repair-details">Repair Lab </a></li>
-                        <li><a href="installation-services.html#installation-details">CCTV Installation</a></li>
-                        <li><a href="index.html#contact">Customer Support</a></li>
-                        <li><a href="index.html#contact">Training and Education</a></li>
+                        <li><a href="software-solutions.html#software-details"><span class="icon">&#9656;</span>Software Solutions</a></li>
+                        <li><a href="hardware-solutions.html#hardware-details"><span class="icon">&#9656;</span>Hardware Solutions</a></li>
+                        <li><a href="repair-lab.html#repair-details"><span class="icon">&#9656;</span>Repair Lab </a></li>
+                        <li><a href="installation-services.html#installation-details"><span class="icon">&#9656;</span>CCTV Installation</a></li>
+                        <li><a href="index.html#contact"><span class="icon">&#9656;</span>Customer Support</a></li>
+                        <li><a href="index.html#contact"><span class="icon">&#9656;</span>Training and Education</a></li>
                     </ul>
                 </li>   
                 <li class="nav-items">
@@ -97,23 +97,21 @@
                 <div class="about-details">
                      <h2 class="section-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">About Us</h2>
                      <p class="text" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700"> Peak POS Pro is a dynamic company at the intersection of financial technology and electronics repair.
-                         Established in 2022, our mission is to provide seamless point-of-sale (POS) solutions to business
-                    es of all sizes, while also offering expert repair services for a wide range of electronic devices. We aim 
+                         Established in 2022, our mission is to provide seamless point-of-sale (POS) solutions to businesses of all sizes, while also offering expert repair services for a wide range of electronic devices. We aim 
                     to enhance operational efficiency and ensure that technology remains an enabler, not a barrier, for 
                     our clients.
                      We have successfully delivered electronic payment solutions in Central and East Africa, with ambition to
                     expand to the Greater Africa region. The combination of cutting edge, robust and secure software with 
-                    on-the-ground client and retailer payment network management, in creating transformative pay
-                    ment solutions in Africa.
+                    on-the-ground client and retailer payment network management, in creating transformative payment solutions in Africa.
                      Peak POS Pro has already began the process of ISO and PCI certification of the repair centre which 
                     should be completed in third  quarter of 2026.
                      </p>
 
                      <div class="social-link-list">
                         <a href="https://www.facebook.com/" class="social-link"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="900"  target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://x.com/"             class="social-link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://x.com/"             class="social-link" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1000" target="_blank"><i class="fab fa-x-twitter"></i></a>
                         <a href="https://www.instagram.com/" class="social-link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1200" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/" class="social-link"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="1400" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.linkedin.com/" class="social-link"  data-aos="fade-down" data-aos-duration="800" data-aos-delay="1400" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://www.tiktok.com/" class="social-link"    data-aos="fade-up" data-aos-duration="800" data-aos-delay="1600" target="_blank"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
@@ -429,6 +427,7 @@
         </div>
     </div>
     </footer>
+
     <!--linking swiper JS-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!--linking script JS-->
@@ -450,6 +449,46 @@
     });
   });
 </script>
+
+<!--whatsapp floating button
+<a href="https://wa.me/+254719630922" class="whatsapp-float" target="_blank" rel="noopener">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp" />
+</a>-->
+
+<div class="whatsapp-widget">
+  <div class="whatsapp-popup">
+    <h4>Chat with us on WhatsApp</h4>
+    <ul>
+      <li>
+        <a href="https://wa.me/+254797154867?text=Hi%20Support%2C%20I%20need%20help" target="_blank">
+          👩PeakPOSPro–Support
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="whatsapp-button" onclick="toggleWhatsAppPopup()">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp" />
+  </div>
+</div>
+
+<script>
+
+  function toggleWhatsAppPopup() {
+    const popup = document.querySelector('.whatsapp-popup');
+    popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+  }
+
+  // Optional: Close popup when clicking outside    
+  window.addEventListener('click', function(e) {
+    const popup = document.querySelector('.whatsapp-popup');
+    const button = document.querySelector('.whatsapp-button');
+    if (!popup.contains(e.target) && !button.contains(e.target)) {
+      popup.style.display = 'none';
+    }
+  });
+</script>
+
+
 
 
 
