@@ -150,5 +150,38 @@
   });
   </script>
 
+  <div class="whatsapp-widget">
+  <div class="whatsapp-popup">
+    <h4>Chat with us on WhatsApp</h4>
+    <ul>
+      <li>
+        <a href="https://wa.me/+254797154867?text=Hi%20Support%2C%20I%20need%20help" target="_blank">
+          👩PeakPOSPro–Support
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="whatsapp-button" onclick="toggleWhatsAppPopup()">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp" />
+  </div>
+</div>
+
+<script>
+
+  function toggleWhatsAppPopup() {
+    const popup = document.querySelector('.whatsapp-popup');
+    popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+  }
+
+  // Optional: Close popup when clicking outside    
+  window.addEventListener('click', function(e) {
+    const popup = document.querySelector('.whatsapp-popup');
+    const button = document.querySelector('.whatsapp-button');
+    if (!popup.contains(e.target) && !button.contains(e.target)) {
+      popup.style.display = 'none';
+    }
+  });
+</script>
+
 </body>
 </html> 

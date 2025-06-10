@@ -138,6 +138,11 @@ header .navbar {
     background-color: none;
     
 }
+.nav-menu .toggle-dropdown:hover {
+    color: var(--link-hover-color);
+    background-color: none;
+  
+}
  
 .navbar :where(#menu-close-button, #menu-open-button) {
         display: none;
@@ -249,6 +254,7 @@ header .navbar {
     color: var(--primary-color);
         
 }
+
 
 .hero-section .hero-details .contact-us:hover
 {
@@ -1003,8 +1009,27 @@ color: var(--link-hover-color);
         color: var(--primary-color);
         font-size: var(--font-size-lg);
         margin-right: 10px;
-
 }
+.contact-section .contact-info a{
+        color: var(--heading-color); ;
+        font-size: 16.3px;
+        margin-right: 10px;
+        font-family: "Merriweather", serif;
+}
+.contact-section .contact-info a:hover
+ {
+        color: var(--link-hover-color);
+        text-decoration: underline;    
+}
+
+.contact-section .contact-info .fa-globe:hover,
+.contact-section .contact-info .fa-phone:hover,
+.contact-section .contact-info .fa-envelope:hover,
+.contact-section .contact-info .fa-clock:hover,
+.contact-section .contact-info .fa-location-crosshairs:hover {
+        color: var(--link-hover-color);
+}
+/* Defining styles for the map section */
 .map-container {
     width: 100%;
     height: 300px;
@@ -1301,7 +1326,7 @@ body.show-mobile-menu .navbar .nav-menu {
 .whatsapp-button {
   width: 30px;
   height: 30px;
-  background-color: #25D366;
+  background-color: #4ce925;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1314,7 +1339,9 @@ body.show-mobile-menu .navbar .nav-menu {
 }
 
 .whatsapp-button:hover {
-  background-color: #1ebd5b;
+  color: var(--link-hover-color);
+  transform: scale(1.1);
+  transition: transform 0.3s; 
 }
 
 .whatsapp-popup {
@@ -1355,6 +1382,9 @@ body.show-mobile-menu .navbar .nav-menu {
   text-decoration: none;
   color: var(--link-hover-color);
   font-weight: bold;
+}
+.whatsapp-popup a:hover {
+  color: #4ce925;
 }
 
 @keyframes fadeIn {
