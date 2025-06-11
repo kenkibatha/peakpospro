@@ -17,6 +17,35 @@
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head> 
 <body>
+    <!-- Preloader 
+    <div id="preloader">
+  <object type="image/svg+xml" data="images/tech_logo_animated.svg" class="logo-svg"></object>
+--<svg class="logo-svg" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes glow {
+        0%, 100% { stroke: #00e5ff; filter: drop-shadow(0 0 5px #00e5ff); }
+        50% { stroke: #00ffff; filter: drop-shadow(0 0 10px #00ffff); }
+      }
+      .spin {
+        animation: spin 4s linear infinite;
+        transform-origin: 50% 50%;
+      }
+      .glow path {
+        animation: glow 2s ease-in-out infinite;
+      }
+    </style>
+    <g class="spin glow">
+       Vectorized path approximation of the logo
+      <circle cx="256" cy="256" r="180" fill="none" stroke="#00e5ff" stroke-width="10" />
+      <circle cx="256" cy="256" r="80" fill="#00e5ff" />
+    </g>
+  </svg>
+</div>-->
+
     <!-- Header / Navbar -->
     <header>
         <nav class="navbar section-content"> <!--section content-->
@@ -117,7 +146,6 @@
                 </div>
              </div>
         </section>
-
         <!--Services section-->
         <section class="services-section" id="services">
             <div class="section-content">
@@ -495,6 +523,17 @@
       popup.style.display = 'none';
     }
   });
+</script>
+
+<script>
+    // Preloader functionality
+ // window.addEventListener("load", () => {
+    //const preloader = document.getElementById("preloader");
+  //  preloader.style.opacity = "0";
+   // setTimeout(() => {
+   //   preloader.style.display = "none";
+   // }, 600);
+ // });
 </script>
 
 
