@@ -204,8 +204,8 @@ header .navbar {
    min-height: 100vh;
     background-color: var(--secondary-color);
     padding-top: 45px;/*important added*/
-
 }
+
 .hero-section .section-content{
     display: flex;
     align-items: center;
@@ -576,6 +576,9 @@ color: var(--link-hover-color);
 .hardware-feature .image-rotator img:nth-child(7) {
   animation-delay: 18s;
 }
+
+
+
 
 /* Keyframes for rotation */
 @keyframes rotateImages {
@@ -1180,6 +1183,9 @@ body.show-mobile-menu header::before {
         color:var(--primary-color);
 }
 
+.navbar #menu-close-button:hover,.navbar #menu-open-button:hover {
+        color: var(--link-hover-color);
+} 
  
 .navbar .nav-menu {
         display: block;
