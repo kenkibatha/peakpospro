@@ -982,6 +982,7 @@ color: var(--link-hover-color);
 
 .contact-section .form-input:focus {
         border: 2px solid var(--primary-color);
+        box-shadow: 0 0 10px rgba(0, 51, 255, 0.5);
 }
 
 .contact-section .contact-form textarea .form-input {
